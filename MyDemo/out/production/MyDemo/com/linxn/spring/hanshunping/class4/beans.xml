@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--<bean id="changeLetter" class="com.linxn.spring.hanshunping.class4.UpperCase">-->
+        <!--<property name="str" value="i'm lower case letter"/>-->
+    <!--</bean>-->
+
+    <bean id="changeLetter" class="com.linxn.spring.hanshunping.class4.LowerCase">
+        <property name="str" value="i'm upper case letter"/>
+    </bean>
+
+</beans>
