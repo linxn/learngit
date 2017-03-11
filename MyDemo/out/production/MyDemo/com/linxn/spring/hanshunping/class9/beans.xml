@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="department" class="com.linxn.spring.hanshunping.class9.Department">
+        <property name="employee">
+            <list>
+                <value>Linxn</value>
+                <value>Sean</value>
+                <value>Joey</value>
+            </list>
+        </property>
+        <property name="employees">
+            <list>
+                <ref bean="em1"/>
+                <ref bean="em2"/>
+                <ref bean="em3"/>
+            </list>
+        </property>
+        <property name="employeeSet">
+            <set>
+                <ref bean="em1"/>
+                <ref bean="em2"/>
+                <ref bean="em3"/>
+            </set>
+        </property>
+        <property name="employeeMap">
+            <map>
+                <entry key="1" value-ref="em1"/>
+                <entry key="2" value-ref="em2"/>
+                <entry key="3" value-ref="em3"/>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="em1" class="com.linxn.spring.hanshunping.class9.Employee" >
+        <property name="name" value="Linxn"/>
+    </bean>
+    <bean id="em2" class="com.linxn.spring.hanshunping.class9.Employee">
+        <property name="name" value="Sean"/>
+    </bean>
+    <bean id="em3" class="com.linxn.spring.hanshunping.class9.Employee">
+        <property name="name" value="Joey"/>
+    </bean>
+
+</beans>

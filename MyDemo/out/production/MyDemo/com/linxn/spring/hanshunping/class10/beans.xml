@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="student" class="com.linxn.spring.hanshunping.class10.Sutdent">
+        <property name="name" value="linxn" />
+        <property name="age" value="20" />
+        <property name="sex" value="male"/>
+    </bean>
+
+    <bean id="degree" parent="student" class="com.linxn.spring.hanshunping.class10.Degree">
+        <property name="degree" value="大三"/>
+        <property name="name" value="Sean"/>
+        <property name="pp">
+            <props>
+                <prop key="1">linxn</prop>
+                <prop key="2">Sean</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>

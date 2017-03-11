@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+        default-autowire="no">
+    <!--default-autowire属性用于配置下面bean的默认autowire-->
+
+
+    <!--使用构造函数注入  不常用-->
+    <bean id="cat" class="com.linxn.spring.hanshunping.class11.Cat">
+        <constructor-arg value="小黄"/>
+    </bean>
+
+    <!--bean的自动装配 byType类似于buName 还有constructor、autodetect、default和no-->
+    <bean id="master" class="com.linxn.spring.hanshunping.class11.Master" autowire="byType">
+        <property name="name" value="linxn"/>
+    </bean>
+
+</beans>

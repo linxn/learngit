@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--使用构造函数注入  不常用-->
+    <bean id="cat" class="com.linxn.spring.hanshunping.class11.Cat">
+        <constructor-arg value="小黄"/>
+    </bean>
+
+    <bean id="master" class="com.linxn.spring.hanshunping.class11.Master" autowire="byType">
+        <property name="name" value="linxn"/>
+    </bean>
+
+</beans>
