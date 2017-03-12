@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--配置前置通知-->
+    <bean id="myMethodBeforeAdvice" class="com.linxn.spring.hanshunping.class14.MyMethodBeforeAdvice"/>
+    <!--配置目标对象-->
+    <bean id="testServiceInter" class="com.linxn.spring.hanshunping.class14.Test1Service">
+        <property name="name">
+            <value>linxn</value>
+        </property>
+    </bean>
+
+    <!--代理对象 spring提供-->
+    <bean id="proxyFactoryBean" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <!--代理的接口集-->
+        <property name="proxyInterfaces">
+            <list>
+                <value>com.linxn.spring.hanshunping.class14.TestServiceInter</value>
+            </list>
+        </property>
+        <!--通知名集-->
+        <property name="interceptorNames">
+            <list>
+                <value>myMethodBeforeAdvice</value>
+            </list>
+        </property>
+        <property name="target" ref="testServiceInter"/>
+    </bean>
+
+
+
+</beans>

@@ -12,7 +12,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Main {
     public static void main(String[] args) {
         ApplicationContext ac = new ClassPathXmlApplicationContext("com/linxn/spring/hanshunping/class4/beans.xml");
-        //可以用ChangeLetter接口来声明
+        //可以用ChangeLetter接口来声明 ChangeLetter为接口
         ChangeLetter obj = (ChangeLetter) ac.getBean("changeLetter");
         System.out.println(obj.Change());
     }
