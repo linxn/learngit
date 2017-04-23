@@ -1,0 +1,13 @@
+.heading{
+    text-align: center;
+    padding-top: 150px;
+}
+
+.form-signin{
+    margin: 0 auto;
+    max-width: 330px;
+    padding: 15px;
+}
+.wrongph{
+    color: red;
+}

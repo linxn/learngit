@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+<struts-config>
+    <form-beans>
+        <!--name:表单名字，随意填写，用于与下面的action绑定-->
+        <!--type：表单全路径，用于反射机制找到表单，生成表单实例-->
+        <form-bean name="loginActionForm" type="com.linxn.forms.LoginActionForm"/>
+    </form-beans>
+
+    <action-mappings>
+        <!--path:将来访问该action的资源名-->
+        <!--name:用于关联表单-->
+        <!--path:用于指定全路径-->
+        <action path="/login" name="loginActionForm" type="com.linxn.actions.LoginAction">
+            <!--配置跳转-->
+            <forward name="ok" path="/WEB-INF/jsp/wel.jsp"/>
+            <forward name="err" path="/WEB-INF/jsp/err.jsp"/>
+        </action>
+    </action-mappings>
+</struts-config>
